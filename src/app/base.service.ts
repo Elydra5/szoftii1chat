@@ -5,16 +5,17 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/datab
   providedIn: 'root'
 })
 export class BaseService {
-  messageRef: AngularFireList<any>
-  constructor(private db:AngularFireDatabase) {
-    this.messageRef = db.list('messages')
+  messageRef:AngularFireList<any>
+
+  constructor(private db:AngularFireDatabase) { 
+    this.messageRef = db.list("messages")
   }
 
-  getMessages(){
+  getMessages() {
     return this.messageRef
   }
 
-  addMessage(uzi:any){
-    this.messageRef.push({username:"asd", message:uzi})
+  addMessage(uzi:any) {
+    this.messageRef.push({username:"asd",message:uzi})
   }
 }

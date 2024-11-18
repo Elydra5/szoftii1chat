@@ -6,7 +6,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./send.component.scss'],
 })
 export class SendComponent  implements OnInit {
-
   newMessage:any
   @Output() create = new EventEmitter()
 
@@ -14,8 +13,7 @@ export class SendComponent  implements OnInit {
 
   ngOnInit() {}
 
-  addMessage(){
+  addMessage() {
     this.create.emit(this.newMessage)
   }
-
 }
